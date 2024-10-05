@@ -21,3 +21,8 @@ echo "hola\n";
 <a href="01-basico/asignacion.php">asignacion</a>
 <br>
 <a href="01-basico/signacion_referencia.php">asignacion por referencia</a>
+<br>
+<a href="01-basico/operador_comparacion.php">operadores de comparacion</a>
+<br>
+<a href="01-basico/OPERADORES_LOGICOS.php">operadores LOGICOS</a>
+<br>
