@@ -26,3 +26,12 @@ echo "hola\n";
 <br>
 <a href="01-basico/OPERADORES_LOGICOS.php">operadores LOGICOS</a>
 <br>
+<a href="01-basico/incremento_decremento.php">incremento_decremento</a>
+<br>
+<a href="01-basico/condicionales.php">condicionales</a>
+<br>
+<a href="01-basico/condicionesles_dobles.php">condicionales Dobles</a>
+<br>
+<a href="01-basico/condicionales_anidados.php">condicionales Anidadas</a>
+<br>
+<a href="01-basico/switch.php">Switch</a>
