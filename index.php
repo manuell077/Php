@@ -35,3 +35,7 @@ echo "hola\n";
 <a href="01-basico/condicionales_anidados.php">condicionales Anidadas</a>
 <br>
 <a href="01-basico/switch.php">Switch</a>
+<br>
+<a href="01-basico/while.php">While</a>
+<br>
+<a href="02-formularios/get.php">Formulario</a>
