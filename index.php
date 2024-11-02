@@ -5,7 +5,8 @@
 
 echo "hola\n";
 
-?><hr>
+?>
+<hr>
 <a href="01-basico/tipos_datos.php">tipos de datos</a>
 <br>
 <a href="01-basico/variables.php">variables</a>
@@ -38,4 +39,4 @@ echo "hola\n";
 <br>
 <a href="01-basico/while.php">While</a>
 <br>
-<a href="02-formularios/get.php">Formulario</a>
+<a href="02-formularios/get,php">Formulario</a>
