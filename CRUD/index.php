@@ -67,10 +67,10 @@ echo "</pre>";
 
    
     <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" id="nombre">
+    <input type="text" name="nombre" id="nombre" pattern="[a-zA-Z]{0,5}" >
 
     <label for="apellido">Apellido</label>
-    <input type="text" name="apellido" id="apellido">
+    <input type="text" name="apellido" id="apellido" >
 
     <label for="correo">Correo</label>
     <input type="text" name="correo" id="correo">
@@ -93,8 +93,5 @@ echo "</pre>";
         ?>
     </div>
 
-
-    
-      
     <input type="submit">
 </form>
