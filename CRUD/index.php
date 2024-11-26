@@ -23,6 +23,8 @@ $banderaLenguajes = $conexion->prepare($sqlLenguajes);
 $banderaLenguajes->execute();
 $lenguajes = $banderaLenguajes->fetchAll();
 
+
+
 echo "<pre>";
 print_r($generos);
 echo "</pre>";
