@@ -7,7 +7,7 @@ $conexion = $db->getConexion();
 
 $id_usuario  = $_GET['id'];
 
-$sqlUsuario = "SELECT  u.id_usuario , u.nombres , u.apellidos , u.correo , u.fecha_nacimiento , u.id_genero , u.id_ciudad FROM usuarios u INNER JOIN generos g on u.id_genero = g.id_genero  INNER JOIN ciudades c on u.id_ciudad = c.id_ciudad ";
+$sqlUsuario = "SELECT  u.id_usuario , u.nombres , u.apellidos , u.correo , u.fecha_nacimientio , u.id_genero , u.id_ciudad FROM usuarios u INNER JOIN generos g on u.id_genero = g.id_genero  INNER JOIN ciudades c on u.id_ciudad = c.id_ciudad ";
 $banderaUsuario = $conexion->prepare($sqlUsuario);
 $banderaUsuario->execute();
 $usuarios = $banderaUsuario->fetchAll();

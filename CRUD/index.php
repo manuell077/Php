@@ -30,10 +30,15 @@ $lenguajes = $banderaLenguajes->fetchAll();
 
 ?>
 
-<form action="controlador.php" method="post" >
-    <div>
+<link rel="stylesheet" href="estilos.css">
+
+
+<div class="contenedor">
+<form action="controlador.php" method="post"  class="formulario">
+    <h1 class="titulo">ENVIO FORMULARIO</h1>
+    <div class="seleccion">
         <label for="id_ciudad">Ciudades</label>
-        <select name="id_ciudad" id="id_ciudad">
+        <select name="id_ciudad" id="id_ciudad" required>
             <?php foreach ($ciudades as $key => $value)
             {?>
                 <option id="<?=$value['id_ciudad']?>" value="<?=$value['id_ciudad']?>
@@ -45,13 +50,13 @@ $lenguajes = $banderaLenguajes->fetchAll();
         </select>
     </div>
 
-    <div>
-        <label>Generos</label><br>
+    <div class="generos">
+        <label class="titulo">Generos</label><br>
         <?php
         foreach ($generos as $key => $value){
         ?>
-        <label for="gen_<?=$value['id_genero']?>">            
-            <input id="gen_<?=$value['id_genero']?>" type="radio" name="genero" value="<?=$value['id_genero']?>">
+        <label for="gen_<?=$value['id_genero']?>" >            
+            <input id="gen_<?=$value['id_genero']?>" type="radio" name="genero" value="<?=$value['id_genero']?>" required>
             <?=$value['genero']?>
         </label>
         <br>
@@ -60,27 +65,38 @@ $lenguajes = $banderaLenguajes->fetchAll();
         ?>
     </div>
 
+    
+    <div class="entradas">
+    
+    <div class="entradas__textos">
+    <label for="nombre"  >Nombre</label>
+    <input type="text" name="nombre" id="nombre" pattern="^[a-zA-Z]{2,}$" required >
+     
+    </div>
+    
+    <div class="entradas__textos">
+    <label for="apellido"  >Apellido</label>
+    <input type="text" name="apellido" id="apellido"  pattern="^[a-zA-Z]{4,}$" required >
+    </div>
+    
+    <div class="entradas__textos">
+    <label for="correo" class="entradas__titulo" >Correo</label>
+    <input type="text" name="correo" id="correo"  required>
+    </div>
 
-   
-    <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" id="nombre" pattern="^[a-zA-Z]{5,}$" >
+<div class="entradas__textos">
+    <label for="fecha" >Fecha Nacimiento</label>
+    <input type="date" name="fecha" id="fecha" max="<?=date('Y')?>-<?=date('m')?>-<?=date('d')?>"    required>
+</div>
+    </div>
 
-    <label for="apellido">Apellido</label>
-    <input type="text" name="apellido" id="apellido"  pattern="^[a-zA-Z]{5,}$"  >
-
-    <label for="correo">Correo</label>
-    <input type="text" name="correo" id="correo" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ">
-
-    <label for="fecha">Fecha Nacimiento</label>
-    <input type="date" name="fecha" id="fecha">
-
-    <div>
+    <div class="lenguajes__contenedor">
         <label>Lenguajes</label><br>
         <?php
         foreach ($lenguajes as $key => $value){
         ?>
         <label for="lenguaje_<?=$value['id_lenguaje']?>">            
-            <input id="lenguaje_<?=$value['id_lenguaje']?>" type="checkbox" name="lenguaje[]" value="<?=$value['id_lenguaje']?>">
+            <input id="lenguaje_<?=$value['id_lenguaje']?>" type="checkbox" name="lenguaje[]" value="<?=$value['id_lenguaje']?>" >
             <?=$value['lenguaje']?>
         </label>
         <br>
@@ -88,6 +104,9 @@ $lenguajes = $banderaLenguajes->fetchAll();
         }
         ?>
     </div>
-
-    <input type="submit">
+   
+    <div class="button">
+    <input type="submit" class="button__link">
+    </div>
 </form>
+</div>
