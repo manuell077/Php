@@ -12,7 +12,7 @@
     $ciudad_id = $_POST['id_ciudad'];
     $id_lenguaje = $_POST['lenguaje'];
 
-    $sql = "INSERT INTO usuarios (nombres,apellidos,correo,fecha_nacimientio,id_genero,id_ciudad) VALUES (:nombre,:apellido,:correo,:fecha,:genero_id,:ciudad_id)";
+    $sql = "INSERT INTO usuarios (nombres,apellidos,correo,fecha_nacimiento,id_genero,id_ciudad) VALUES (:nombre,:apellido,:correo,:fecha,:genero_id,:ciudad_id)";
     $stm = $conexion->prepare($sql);
     $stm->bindParam(':nombre', $nombre);
     $stm->bindParam(':apellido', $apellido);
@@ -26,7 +26,7 @@
    $id_usuario = $conexion->lastInsertId();
 
 
-   $sqlLenguajes = "INSERT INTO lenguaje_usuario(id_usuario,id_lenguaje) VALUES (:id_usuario,:id_lenguaje)";
+   $sqlLenguajes = "INSERT INTO lenguaje_usuarios(id_usuario,id_lenguaje) VALUES (:id_usuario,:id_lenguaje)";
 
    $prueba = $conexion->prepare($sqlLenguajes);
    foreach ($id_lenguaje as $key => $value) {

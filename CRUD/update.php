@@ -14,7 +14,7 @@
     $ciudad_id = $_POST['id_ciudad'];
     $id_lenguaje = $_POST['lenguaje'];
 
-    $sql = "UPDATE usuarios SET nombres = :nombre,  apellidos = :apellido ,  correo = :correo , fecha_nacimientio = :fecha , id_genero = :genero_id , id_ciudad = :ciudad_id WHERE id_usuario = :id_usuario  ";
+    $sql = "UPDATE usuarios SET nombres = :nombre,  apellidos = :apellido ,  correo = :correo , fecha_nacimiento = :fecha , id_genero = :genero_id , id_ciudad = :ciudad_id WHERE id_usuario = :id_usuario  ";
     $stm = $conexion->prepare($sql);
     $stm->bindParam(':nombre', $nombre);
     $stm->bindParam(':apellido', $apellido);

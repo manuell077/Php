@@ -9,7 +9,7 @@
 
 
 
-   $sqlEliminar = "DELETE FROM lenguaje_usuario WHERE id_usuario  = :id_usuario";
+   $sqlEliminar = "DELETE FROM lenguaje_usuarios WHERE id_usuario  = :id_usuario";
     $sq = $conexion->prepare($sqlEliminar);
     $sq->bindParam(':id_usuario',$id_usuario);
     $sq->execute();

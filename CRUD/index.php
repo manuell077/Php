@@ -10,9 +10,7 @@ $banderaCiudades = $conexion->prepare($sqlCiudades);
 $banderaCiudades->execute();
 $ciudades = $banderaCiudades->fetchAll();
 
-echo "<pre>";
-print_r($ciudades);
-echo "</pre>";
+ 
 
 
 $sqlGeneros = "SELECT * FROM generos";
@@ -28,9 +26,7 @@ $lenguajes = $banderaLenguajes->fetchAll();
 
 
 
-echo "<pre>";
-print_r($generos);
-echo "</pre>";
+
 
 ?>
 
@@ -67,13 +63,13 @@ echo "</pre>";
 
    
     <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" id="nombre" pattern="[a-zA-Z]{0,5}" >
+    <input type="text" name="nombre" id="nombre" pattern="^[a-zA-Z]{5,}$" >
 
     <label for="apellido">Apellido</label>
-    <input type="text" name="apellido" id="apellido" >
+    <input type="text" name="apellido" id="apellido"  pattern="^[a-zA-Z]{5,}$"  >
 
     <label for="correo">Correo</label>
-    <input type="text" name="correo" id="correo">
+    <input type="text" name="correo" id="correo" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ">
 
     <label for="fecha">Fecha Nacimiento</label>
     <input type="date" name="fecha" id="fecha">
