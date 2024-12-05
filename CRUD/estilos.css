@@ -91,18 +91,50 @@
     width: 100%;
     height: 100%;
     background-color:#2196f3 ;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.contenedorTabla{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .tabla{
+    
     background-color: white;
+    border-radius: 25px;
+    border: 10px solid black;
+    font-family: "Roboto Condensed", sans-serif;
+    
     
     
 }
 
 .tabla__columnas{
     border: 1px solid black;
+    
 }
 
 .tabla__filas{
     border: 1px solid black;
+    text-align: center;
+    
+    
 }
+
+.titulo__usuarios{
+    font-family: "Roboto Condensed", sans-serif;
+    margin-bottom: 20px;
+}
+
+.icono{
+    color: #2196f3 ;
+}
+
+

@@ -7,7 +7,7 @@ $conexion = $db->getConexion();
 
 $id_usuario  = $_GET['id'];
 
-$sqlUsuario = "SELECT  u.id_usuario , u.nombres , u.apellidos , u.correo , u.fecha_nacimientio , u.id_genero , u.id_ciudad FROM usuarios u INNER JOIN generos g on u.id_genero = g.id_genero  INNER JOIN ciudades c on u.id_ciudad = c.id_ciudad ";
+$sqlUsuario = "SELECT  u.id_usuario , u.nombres , u.apellidos , u.correo , u.fecha_nacimiento , u.id_genero , u.id_ciudad FROM usuarios u INNER JOIN generos g on u.id_genero = g.id_genero  INNER JOIN ciudades c on u.id_ciudad = c.id_ciudad ";
 $banderaUsuario = $conexion->prepare($sqlUsuario);
 $banderaUsuario->execute();
 $usuarios = $banderaUsuario->fetchAll();
@@ -44,7 +44,7 @@ $banderaLenguajes = $conexion->prepare($sqlLenguajes);
 $banderaLenguajes->execute();
 $lenguajes = $banderaLenguajes->fetchAll();
 
-$sqlLenguajeSeleccion = "SELECT * FROM lenguajes l INNER JOIN  lenguaje_usuario lu on l.id_lenguaje = lu.id_lenguaje WHERE lu.id_usuario = $id_usuario";
+$sqlLenguajeSeleccion = "SELECT * FROM lenguajes l INNER JOIN  lenguaje_usuarios lu on l.id_lenguaje = lu.id_lenguaje WHERE lu.id_usuario = $id_usuario";
 $banderaLenguajesSeleccion = $conexion->prepare($sqlLenguajeSeleccion);
 $banderaLenguajesSeleccion->execute();
 $lenguajeSeleccionados = $banderaLenguajesSeleccion->fetchAll();
