@@ -28,7 +28,11 @@
     border-radius: 25px;
     background-color: white;
     
+    
 }
+
+
+
 
 .titulo{
     display: flex;
@@ -135,6 +139,18 @@
 
 .icono{
     color: #2196f3 ;
+}
+
+.error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.error__icono{
+    color:red;
+    font-size: 50px;
 }
 
 

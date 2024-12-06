@@ -86,9 +86,11 @@ $lenguajes = $banderaLenguajes->fetchAll();
 
 <div class="entradas__textos">
     <label for="fecha" >Fecha Nacimiento</label>
-    <input type="date" name="fecha" id="fecha" max="<?=date('Y')?>-<?=date('m')?>-<?=date('d')?>"    required>
+    <input type="date" name="fecha" id="fecha" max="<?=date('Y')?>-<?=date('m')?>-<?=date('d')?>"  required>
 </div>
+
     </div>
+    
 
     <div class="lenguajes__contenedor">
         <label>Lenguajes</label><br>
@@ -103,10 +105,12 @@ $lenguajes = $banderaLenguajes->fetchAll();
         <?php
         }
         ?>
-    </div>
-   
+        </div>
+    
+     
     <div class="button">
     <input type="submit" class="button__link">
     </div>
+
 </form>
 </div>
